@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "./configure-store";
 
 export type UserState = {
+  id: number;
   name: string;
   likes: number;
 };
@@ -9,6 +10,7 @@ export type UserState = {
 export const userSlice = createSlice({
   name: "user",
   initialState: {
+    id: 1,
     name: "Clark Kent",
     likes: 0,
   } as UserState,
